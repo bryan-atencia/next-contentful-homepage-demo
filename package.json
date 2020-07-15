@@ -1,7 +1,7 @@
 {
-  "name": "next-homepage-demo",
+  "name": "next-contenful-homepage-demo",
   "version": "1.0.0",
-  "description": "homepage demo with next.js and butterCMS",
+  "description": "homepage demo with next.js and Contentful",
   "main": "index.js",
   "keywords": [],
   "author": "",
