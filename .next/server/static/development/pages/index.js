@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -231,7 +231,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getHome\", function() { return getHome; });\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nvar butter = __webpack_require__(/*! buttercms */ \"buttercms\")(\"8d6d186981c0902966f48b2f7db8a6aaa5205822\");\n\nfunction getHome() {\n  return _getHome.apply(this, arguments);\n}\n\nfunction _getHome() {\n  _getHome = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    var fetchHome, homeData, data;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return butter.page.retrieve('*', 'home');\n\n          case 2:\n            fetchHome = _context.sent;\n            _context.next = 5;\n            return fetchHome;\n\n          case 5:\n            homeData = _context.sent;\n            data = homeData.data.data.fields;\n            return _context.abrupt(\"return\", data);\n\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _getHome.apply(this, arguments);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9mdW5jdGlvbnMvaW5kZXguanM/ZjkzOCJdLCJuYW1lcyI6WyJidXR0ZXIiLCJyZXF1aXJlIiwiZ2V0SG9tZSIsInBhZ2UiLCJyZXRyaWV2ZSIsImZldGNoSG9tZSIsImhvbWVEYXRhIiwiZGF0YSIsImZpZWxkcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsSUFBSUEsTUFBTSxHQUFHQyxtQkFBTyxDQUFDLDRCQUFELENBQVAsQ0FBcUIsMENBQXJCLENBQWI7O0FBRU8sU0FBZUMsT0FBdEI7QUFBQTtBQUFBOzs7cUVBQU87QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFDaUJGLE1BQU0sQ0FBQ0csSUFBUCxDQUFZQyxRQUFaLENBQXFCLEdBQXJCLEVBQTBCLE1BQTFCLENBRGpCOztBQUFBO0FBQ0RDLHFCQURDO0FBQUE7QUFBQSxtQkFFZ0JBLFNBRmhCOztBQUFBO0FBRURDLG9CQUZDO0FBR0RDLGdCQUhDLEdBR01ELFFBQVEsQ0FBQ0MsSUFBVCxDQUFjQSxJQUFkLENBQW1CQyxNQUh6QjtBQUFBLDZDQUtFRCxJQUxGOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEciLCJmaWxlIjoiLi9mdW5jdGlvbnMvaW5kZXguanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYnV0dGVyID0gcmVxdWlyZSgnYnV0dGVyY21zJykoXCI4ZDZkMTg2OTgxYzA5MDI5NjZmNDhiMmY3ZGI4YTZhYWE1MjA1ODIyXCIpO1xuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0SG9tZSgpIHtcbiAgbGV0IGZldGNoSG9tZSA9IGF3YWl0IGJ1dHRlci5wYWdlLnJldHJpZXZlKCcqJywgJ2hvbWUnKVxuICBsZXQgaG9tZURhdGEgPSBhd2FpdCBmZXRjaEhvbWVcbiAgbGV0IGRhdGEgPSBob21lRGF0YS5kYXRhLmRhdGEuZmllbGRzXG5cbiAgcmV0dXJuIGRhdGFcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./functions/index.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getHome\", function() { return getHome; });\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err); } _next(undefined); }); }; }\n\nfunction getHome() {\n  return _getHome.apply(this, arguments);\n}\n\nfunction _getHome() {\n  _getHome = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n    var fetchHome, homeData, data;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return fetch(\"https://cdn.contentful.com/spaces/8x9h02x0glox/environments/master/entries/J5koEV03Su6H84xFZ0q3v?access_token=FA0YXUdosKtX2pFUzZ0RjDdOjq-Vqk3rhsQZH1pNZNA\");\n\n          case 2:\n            fetchHome = _context.sent;\n            _context.next = 5;\n            return fetchHome.json();\n\n          case 5:\n            homeData = _context.sent;\n            data = homeData;\n            return _context.abrupt(\"return\", data.fields.home);\n\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n  return _getHome.apply(this, arguments);\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9mdW5jdGlvbnMvaW5kZXguanM/ZjkzOCJdLCJuYW1lcyI6WyJnZXRIb21lIiwiZmV0Y2giLCJmZXRjaEhvbWUiLCJqc29uIiwiaG9tZURhdGEiLCJkYXRhIiwiZmllbGRzIiwiaG9tZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQU8sU0FBZUEsT0FBdEI7QUFBQTtBQUFBOzs7cUVBQU87QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFDaUJDLEtBQUssQ0FBQywySkFBRCxDQUR0Qjs7QUFBQTtBQUNEQyxxQkFEQztBQUFBO0FBQUEsbUJBRWdCQSxTQUFTLENBQUNDLElBQVYsRUFGaEI7O0FBQUE7QUFFREMsb0JBRkM7QUFHREMsZ0JBSEMsR0FHTUQsUUFITjtBQUFBLDZDQUtFQyxJQUFJLENBQUNDLE1BQUwsQ0FBWUMsSUFMZDs7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxHIiwiZmlsZSI6Ii4vZnVuY3Rpb25zL2luZGV4LmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldEhvbWUoKSB7XG4gIGxldCBmZXRjaEhvbWUgPSBhd2FpdCBmZXRjaChcImh0dHBzOi8vY2RuLmNvbnRlbnRmdWwuY29tL3NwYWNlcy84eDloMDJ4MGdsb3gvZW52aXJvbm1lbnRzL21hc3Rlci9lbnRyaWVzL0o1a29FVjAzU3U2SDg0eEZaMHEzdj9hY2Nlc3NfdG9rZW49RkEwWVhVZG9zS3RYMnBGVXpaMFJqRGRPanEtVnFrM3Joc1FaSDFwTlpOQVwiKVxuICBsZXQgaG9tZURhdGEgPSBhd2FpdCBmZXRjaEhvbWUuanNvbigpXG4gIGxldCBkYXRhID0gaG9tZURhdGFcblxuICByZXR1cm4gZGF0YS5maWVsZHMuaG9tZVxufVxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./functions/index.js\n");
 
 /***/ }),
 
@@ -411,14 +411,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/bryanatencia/demo/next-homepage-demo/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/bryanatencia/demo/next-contentful-demo/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -464,17 +464,6 @@ eval("module.exports = require(\"@material-ui/icons/Add\");//# sourceURL=[module
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"@material-ui/icons/Remove\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJAbWF0ZXJpYWwtdWkvaWNvbnMvUmVtb3ZlXCI/Y2ZlMCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJAbWF0ZXJpYWwtdWkvaWNvbnMvUmVtb3ZlLmpzIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwiQG1hdGVyaWFsLXVpL2ljb25zL1JlbW92ZVwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///@material-ui/icons/Remove\n");
-
-/***/ }),
-
-/***/ "buttercms":
-/*!****************************!*\
-  !*** external "buttercms" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"buttercms\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJidXR0ZXJjbXNcIj9jYjkzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6ImJ1dHRlcmNtcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcImJ1dHRlcmNtc1wiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///buttercms\n");
 
 /***/ }),
 
