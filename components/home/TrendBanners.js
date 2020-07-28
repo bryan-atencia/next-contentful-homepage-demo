@@ -66,7 +66,7 @@ export default (props) => {
                 <Grid container justify="space-between" className={ classes.tilesGrid }>
                   {data.map((x, y) => {
                     return (
-                      <Link href="/Shirts">
+                      <Link href="/ties">
                         <Grid
                           key={y}
                           container

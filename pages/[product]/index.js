@@ -69,111 +69,93 @@ export default ( props ) => {
 
   const fetchData = async(data) => {
     let product = router.query.product
-    router.push(`/${product}?${data.join("&")}`, undefined, { shallow: true })
+    router.push(`/query/${product}?${data.join("&")}`, undefined, { shallow: true })
   }
 
   return <Grid className={ classes.productPageGrid }>
-            <Link href="/">
-              <Typography variant="h5" align="center"> Back Home </Typography>
-            </Link>
-            <Typography variant="h1" className={ classes.header }> { metadata && metadata.header } </Typography>
-            <Typography variant="h5" className={ classes.description }>{ metadata && metadata.subHeader } </Typography>
-            <Grid>
-              <Grid container alignItems="center" justify="space-between" style={{ margin:"20px 0" }}>
-                <Grid item xs={ 2 }>Filter By</Grid>
-                <Grid container item xs={ 10 } justify="center">
-                  <Select value="featured" onChange={ (val) => changeSort( sortValue = val) }>
-                    {
-                      sortOptions.map(( x, y ) => {
-                        return <MenuItem key={ y } value={ x.value }>{ x.display }</MenuItem>
-                      })
-                    }
-                  </Select>
-                </Grid>
-              </Grid>
-              <Grid container>
-                <Grid item xs={ 2 }>
-                  {
-                    Object.values(refinables).map(( x, y ) => {
-                      return <Grid style={{ border:".5px solid", margin:"0 0 10px", padding:"10px" }} key={ y }>
-                                <Typography> { x[0]['refinable']['header'] } </Typography>
-                                <Grid>
-                                  {
-                                    x.map(( a, b ) => {
-                                      return <Grid container style={{ margin:"0 0 10px" }} alignItems="center" key={ b }>
-                                                <Checkbox value={ a['refinable']['seoValue'] } onChange={(val, data) => iconClicked(val, a) }></Checkbox>
-                                                <Typography>{ a['refinable']['value'] }</Typography>
-                                             </Grid>
-                                    })
-                                  }
-                                </Grid>
-                             </Grid>
-                    })
-                  }
-                </Grid>
-                <Grid item xs={ 10 }>
-                  <Grid container justify="space-around">
-                    {
-                      productData.map(( x, y ) => {
-                        return <Link href={ `/product/${x.masterSku}` } key={ y } >
-                                  <Grid container justify="flex-start" alignItems="center" direction="column" item xs={ 4 } style={{ maxWidth:"31%" }} key={ y }>
-                                    <img src={ x.productImage } style={{ width:"100%" }}/>
-                                    <Typography>{ x.name }</Typography>
-                                  </Grid>
-                                </Link>
-                      })
-                    }
-                  </Grid>
-                </Grid>
+        <Link href="/">
+          <Typography variant="h5" align="center"> Back Home </Typography>
+        </Link>
+        <Typography variant="h1" className={ classes.header }> { metadata && metadata.header } </Typography>
+        <Typography variant="h5" className={ classes.description }>{ metadata && metadata.subHeader } </Typography>
+        <Grid>
+          <Grid container alignItems="center" justify="space-between" style={{ margin:"20px 0" }}>
+            <Grid item xs={ 2 }>Filter By</Grid>
+            <Grid container item xs={ 10 } justify="center">
+              <Select value="featured" onChange={ (val) => changeSort( sortValue = val) }>
+                {
+                  sortOptions.map(( x, y ) => {
+                    return <MenuItem key={ y } value={ x.value }>{ x.display }</MenuItem>
+                  })
+                }
+              </Select>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs={ 2 }>
+              {
+                Object.values(refinables).map(( x, y ) => {
+                  return <Grid style={{ border:".5px solid", margin:"0 0 10px", padding:"10px" }} key={ y }>
+                            <Typography> { x[0]['refinable']['header'] } </Typography>
+                            <Grid>
+                              {
+                                x.map(( a, b ) => {
+                                  return <Grid container style={{ margin:"0 0 10px" }} alignItems="center" key={ b }>
+                                            <Checkbox value={ a['refinable']['seoValue'] } onChange={(val, data) => iconClicked(val, a) }></Checkbox>
+                                            <Typography>{ a['refinable']['value'] }</Typography>
+                                         </Grid>
+                                })
+                              }
+                            </Grid>
+                         </Grid>
+                })
+              }
+            </Grid>
+            <Grid item xs={ 10 }>
+              <Grid container justify="space-around">
+                {
+                  productData.map(( x, y ) => {
+                    return <Link href={ `/product/${x.masterSku}` } key={ y } >
+                              <Grid container justify="flex-start" alignItems="center" direction="column" item xs={ 4 } style={{ maxWidth:"31%" }} key={ y }>
+                                <img src={ x.productImage } style={{ width:"100%" }}/>
+                                <Typography>{ x.name }</Typography>
+                              </Grid>
+                            </Link>
+                  })
+                }
               </Grid>
             </Grid>
-         </Grid>
+          </Grid>
+        </Grid>
+     </Grid>
 }
 
-// export async function getStaticPaths() {
-//
-//   let paths = ["shirts", "pants", "ties", "clothing", "whats-new", "bow-ties"]
-//
-//   paths = paths.map(x => {
-//     return {
-//       params: {
-//         product: x
-//       }
-//     }
-//   })
-//
-//   return {
-//           paths,
-//           fallback: false
-//         }
-// }
-//
-// export async function getStaticProps({ params }) {
-//
-//   let productData = await getProducts(params.product)
-//
-//   return {
-//     props: {
-//       productData,
-//       params
-//     }
-//   }
-// }
+export async function getStaticPaths() {
 
-export async function getServerSideProps( context ) {
+  let paths = ["shirts", "pants", "ties", "clothing", "whats-new", "bow-ties"]
 
-  try {
-    await getProducts(context.req.url)
-  } catch(error) {
-    context.res.writeHead(301, { Location:"/" })
-    context.res.end()
-  }
+  paths = paths.map(x => {
+    return {
+      params: {
+        product: x
+      }
+    }
+  })
 
-  let productData = await getProducts(context.req.url)
+  return {
+          paths,
+          fallback: false
+        }
+}
+
+export async function getStaticProps({ params }) {
+
+  let productData = await getProducts(params.product)
 
   return {
     props: {
-      productData
+      productData,
+      params
     }
   }
 }
