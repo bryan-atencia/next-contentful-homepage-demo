@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import classnames from 'classnames'
 import { makeStyles, Grid, Typography } from '@material-ui/core'
 
@@ -65,15 +66,17 @@ export default (props) => {
                 <Grid container justify="space-between" className={ classes.tilesGrid }>
                   {data.map((x, y) => {
                     return (
-                      <Grid
-                        key={y}
-                        container
-                        item
-                        xs={12}
-                        sm={4}
-                        className={classes.homePageTrendBannerTiles}>
-                        <TrendTile data={x} />
-                      </Grid>
+                      <Link href="/Shirts">
+                        <Grid
+                          key={y}
+                          container
+                          item
+                          xs={12}
+                          sm={4}
+                          className={classes.homePageTrendBannerTiles}>
+                            <TrendTile data={x} />
+                        </Grid>
+                      </Link>
                     )
                   })}
                 </Grid>

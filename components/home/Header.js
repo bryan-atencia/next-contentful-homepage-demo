@@ -1,4 +1,6 @@
 import React from "react"
+import Link from 'next/link'
+
 import { makeStyles, Grid, Typography, Button } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
@@ -176,9 +178,11 @@ export default (props) => {
                       {' '}
                       {data.subheader}{' '}
                     </Typography>
-                    <Button className={classes.homePageHeaderButton}>
-                      <Typography variant="button">{data.actiontext}</Typography>
-                    </Button>
+                    <Link href="/clothing">
+                      <Button className={classes.homePageHeaderButton}>
+                        <Typography variant="button">{data.actiontext}</Typography>
+                      </Button>
+                    </Link>
                   </Grid>
                 </Grid>
               </Grid>

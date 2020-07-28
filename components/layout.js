@@ -22,8 +22,6 @@ export default ({ children }) => {
             <title>HomePage Demo</title>
             <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
           </Head>
-            <ThemeProvider theme={ theme }>
-              { children }
-            </ThemeProvider>
+            <ThemeProvider theme={ theme }> { children } </ThemeProvider>
           </div>
 }

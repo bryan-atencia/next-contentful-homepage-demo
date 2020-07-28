@@ -18,7 +18,6 @@ import CelebrityBanner from "../components/home/CelebrityBanner"
 
 const useStyles = makeStyles((theme) => ({
   homePage: {
-    // maxWidth: '1180px',
     margin: '0 auto',
     overflow: 'hidden'
   },
@@ -31,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default (props) => {
-
    const classes = useStyles(props)
+
    const {
      data: {
        homebanner,
